@@ -1,0 +1,20 @@
+<%- include("partials/header") %>
+
+<% carsIndex.forEach(function(car){ %>
+	<div class="conatiner">
+		<div>
+			<h2><%= car.title %></h2>
+		</div>
+		<div>
+			<img src="<%= car.image %>">
+		</div>
+		<div>
+			<%= car.body %>
+		</div>
+	 <a href="/cars/<%= car._id %>">Read More</a>
+	</div>
+<% }) %>
+
+<%- include("partials/footer") %>
+
+	

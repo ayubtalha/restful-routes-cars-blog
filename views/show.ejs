@@ -1,0 +1,20 @@
+<%- include("partials/header") %>
+
+<div class="ui main text container segment">
+	<div><%= showpost.title %></div>
+	<div><img class="ui centered rounded image" src="<%= showpost.image %>"></div>
+	<div><%= showpost.created.toDateString() %></div>
+	<div><%= showpost.body %></div>
+	<div>
+		<p>
+		<a href="/cars/<%= showpost._id %>/edit" class="ui secondary button">edit</a>
+		</p>
+		
+		<form action="/cars/<%= showpost._id %>?_method=DELETE" method="POST">
+		<button class="ui red basic button">Delete</button>
+		</form>	
+		
+	</div>
+</div>
+
+<%- include("partials/footer") %>

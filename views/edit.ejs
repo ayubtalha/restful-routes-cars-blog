@@ -1,0 +1,12 @@
+<%- include("partials/header") %>
+
+<form action="/cars/<%= editpost._id %>?_method=PUT" method="POST">
+	<div class="ui form container">
+	<div class="field"><label>Title</label><input type="text" name="car[title]" value="<%= editpost.title %>"></div>
+	<div class="field"><label>Image</label><input type="text" name="car[image]" value="<%= editpost.image %>"></div>
+	<div class="field"><label>Description</label><textarea name="car[body]"><%=editpost.body %></textarea></div>	
+	<input class="ui secondary button" type="submit">		
+	</div>
+</form>
+
+<%- include("partials/footer") %>
